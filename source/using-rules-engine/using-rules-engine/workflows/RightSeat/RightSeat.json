@@ -1,0 +1,14 @@
+[
+  {
+    "WorkflowName": "RightSeat",
+    "Rules": [
+      {
+        "RuleName": "CheckNestedSimpleProp",
+        "ErrorMessage": "One or more adjust rules failed.",
+        "ErrorType": "Error",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "input1.NestedProp.SimpleProp == \"nestedSimpleProp\""
+      }
+    ]
+  }
+]

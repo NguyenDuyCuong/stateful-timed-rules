@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Rules",
+            "database": "${workspaceFolder:stateful-timed-rules}/source/using-rules-engine/using-rules-engine/rules.db"
+        }
+    ]
+}
