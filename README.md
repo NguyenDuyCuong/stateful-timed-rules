@@ -2,7 +2,11 @@
 Data is time series; we need raise events with custom conditions.
 
 # Keywords
-data pipelines, finite-state automata, data parallel
+data pipelines, finite-state automata, data parallel, micro frontend
+
+# Architect
+## Frontend
+- Micro Frontend, load into shadowDOM, web tunnel ???
 
 # Requirements
 - Nguồn dữ liệu dạng chuỗi thời gian -> cần service get/pub/sub/queue

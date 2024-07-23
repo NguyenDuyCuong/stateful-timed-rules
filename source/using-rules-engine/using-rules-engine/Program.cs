@@ -12,6 +12,8 @@ using (var context = new RulesDemoContext(ConfigurationManager.ConnectionStrings
 
     var user = context.Users.First();
     var logs = new DataWatcher<FlightLog>();
+    var certs = new DataWatcher<Certificate>();
+    var builder = new RulesBuilder(logs, certs);
 
     // trigger Cert -> init monitoring
     var cert = new Certificate() { Name = "Right Seat Currency B737", User = user };
@@ -25,13 +27,12 @@ using (var context = new RulesDemoContext(ConfigurationManager.ConnectionStrings
         ruleProcessor = new RightSeatProcessor();
     }
         
-
     //// load default workflow
-    var builder = new RulesBuilder();
     builder.CreateWorkflows(rulesWF);
 
     // fake trigger data 
     logs.Data = context.FlightLogs.ToList();
+    certs.Data = new List<Certificate>() { cert };
 }
 
 Console.ReadLine();

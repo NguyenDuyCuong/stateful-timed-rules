@@ -11,9 +11,19 @@ namespace workflows
 {
     internal class RulesBuilder
     {
+        private readonly DataWatcher<FlightLog> logs;
+        private readonly DataWatcher<Certificate> certs;
+
+        public RulesBuilder(DataWatcher<FlightLog> logs, DataWatcher<Certificate> certs)
+        {
+            this.logs = logs;
+            this.certs = certs;
+        }
+
         public void CreateWorkflows(IRulesWorkflow wf)
         {
             wf.Load();
+
         }
     }
 }
